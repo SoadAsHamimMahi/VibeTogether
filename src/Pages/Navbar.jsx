@@ -1,11 +1,17 @@
 import React from 'react';
 import logo from '../../public/Picture/FbLogo.png'
+import home from '../../public/Picture/home.png'
+import { Link, NavLink } from 'react-router-dom';
+import { GoHomeFill } from "react-icons/go";
+import { MdOutlineOndemandVideo } from 'react-icons/md';
+import { HiMiniUserGroup } from 'react-icons/hi2';
+
 
 const Navbar = () => {
     return (
         <div>
 
-            <div className="navbar px-4 bg-black">
+            <div className="navbar px-4 bg-[#252728]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,9 +31,10 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Item 1</a></li>
-                            <li> <a>Parent</a></li>
-                            <li><a>Item 3</a></li>
+                            <NavLink to='/' >Home</NavLink>
+                            <NavLink to='/video' >Video</NavLink>
+                            <NavLink to='/group' >Group</NavLink>
+
                         </ul>
                     </div>
 
@@ -35,7 +42,7 @@ const Navbar = () => {
                     <div className='w-12 mr-4'>
                         <img src={logo} alt="" />
                     </div>
-                    
+
 
                     <div>
                         <label className="input input-bordered rounded-3xl flex items-center gap-2">
@@ -57,10 +64,18 @@ const Navbar = () => {
 
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a> </li>
-                        <li><a>Item 3</a></li>
+                    <ul className="menu menu-horizontal px-6  ">
+                        <NavLink to='/' >
+                            <GoHomeFill className='w-7 h-7 mx-4' />
+
+                        </NavLink>
+
+                        <NavLink to='/video' >
+                            <MdOutlineOndemandVideo className='w-7 h-7 mx-4' />
+                        </NavLink>
+                        <NavLink to='/group' >
+                            <HiMiniUserGroup className='w-7 h-7 mx-4' />
+                        </NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
