@@ -10,6 +10,8 @@ import Profile from "./Pages/Profile";
 import MainLayout from "./MainLayout/MainLayout";
 import Video from "./Pages/Video";
 import Group from "./Pages/Group";
+import Login from "./Pages/Login";
+import SignIn from "./Pages/SignIn";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: '/group',
         element: <Group/>,
+      },
+      {
+        path: '/login',
+        element: <Login/>,
+      },
+      {
+        path: '/signin',
+        element: <SignIn/>,
       },
     ]
   },

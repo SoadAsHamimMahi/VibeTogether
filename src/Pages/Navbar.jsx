@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../../public/Picture/FbLogo.png'
-import home from '../../public/Picture/home.png'
+import logo from '../../public/Picture/Logo.png'
+
 import { Link, NavLink } from 'react-router-dom';
 import { GoHomeFill } from "react-icons/go";
 import { MdOutlineOndemandVideo } from 'react-icons/md';
@@ -34,6 +34,8 @@ const Navbar = () => {
                             <NavLink to='/' >Home</NavLink>
                             <NavLink to='/video' >Video</NavLink>
                             <NavLink to='/group' >Group</NavLink>
+                            <NavLink to= '/signin'>Sign In</NavLink>
+                            <NavLink to='/login' >Login</NavLink>
 
                         </ul>
                     </div>
@@ -76,6 +78,9 @@ const Navbar = () => {
                         <NavLink to='/group' >
                             <HiMiniUserGroup className='w-7 h-7 mx-4' />
                         </NavLink>
+
+                        <NavLink to= '/signin'>Sign In</NavLink>
+                        <NavLink to='/login' >Login</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
